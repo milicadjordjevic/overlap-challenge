@@ -1,0 +1,24 @@
+{
+  "name": "ahkh-morpork-challenge",
+  "version": "1.0.0",
+  "description": "code challenge",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "test": "jest --watchAll"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "Milica Djordjevic",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.4",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "jest": "^24.8.0"
+  }
+}

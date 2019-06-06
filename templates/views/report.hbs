@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+
+<body class = "container">
+    <div>
+        <h1>{{title}}</h1>
+    </div>
+    <div id="cards" class="cards-list" numCards={{analyticsLength}} >
+        {{#each analytics}}
+            <div class="card">
+                <div class="card-content" id={{id}} name="{{name}}" total={{total}} overlap={{overlap}}>
+                    <canvas id={{chart_id}}></canvas>
+                    <p class="row"> percent: <b>{{percent}}%</b></p>
+                    <p class="row"> total: <b>{{total}}</b></p>
+                    <p class="row"> overlap count: <b>{{overlap}}</b></p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    <script src="/js/client.js"></script>
+</body>
+</html>
